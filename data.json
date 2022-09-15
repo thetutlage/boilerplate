@@ -1,5 +1,6 @@
 {
   "PACKAGE_NAME": "",
+  "REPO_HANDLE": "",
   "PACKAGE_DESCRIPTION": "",
   "NPM_AUTHORS": "comma separated npm usernames",
   "LICENSE": "MIT"

@@ -2,7 +2,6 @@
   "name": "<%= PACKAGE_NAME %>",
   "version": "0.0.0",
   "description": "<%= PACKAGE_DESCRIPTION %>",
-  "type": "module",
   "files": [
     "src",
     "index.js"
@@ -10,6 +9,7 @@
   "exports": {
     ".": "./index.js"
   },
+  "type": "module",
   "scripts": {
     "pretest": "npm run lint",
     "test": "node --loader=ts-node/esm bin/test.ts",
@@ -21,7 +21,7 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
-    "sync-labels": "github-label-sync --labels .github/labels.json <%= PACKAGE_NAME %>"
+    "sync-labels": "github-label-sync --labels .github/labels.json <%= REPO_HANDLE %>"
   },
   "publishConfig": {
     "access": "public",
@@ -92,5 +92,6 @@
     "tag": "latest",
     "branch": "main",
     "anyBranch": false
-  }
+  },
+  "dependencies": {}
 }

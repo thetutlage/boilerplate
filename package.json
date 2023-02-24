@@ -2,14 +2,17 @@
   "name": "<%= PACKAGE_NAME %>",
   "version": "0.0.0",
   "description": "<%= PACKAGE_DESCRIPTION %>",
+  "type": "module",
+  "main": "build/index.js",
   "files": [
-    "src",
-    "index.js"
+    "build/src",
+    "build/index.d.ts",
+    "build/index.js"
   ],
   "exports": {
-    ".": "./index.js"
+    ".": "./build/index.js",
+    "./types": "./build/src/types.js"
   },
-  "type": "module",
   "scripts": {
     "pretest": "npm run lint",
     "test": "c8 npm run vscode:test",

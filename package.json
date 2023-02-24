@@ -12,7 +12,7 @@
   "type": "module",
   "scripts": {
     "pretest": "npm run lint",
-    "test": "node --loader=ts-node/esm bin/test.ts",
+    "test": "c8 npm run vscode:test",
     "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
@@ -39,6 +39,7 @@
     "@japa/spec-reporter": "^1.1.12",
     "@swc/core": "^1.2.203",
     "@types/node": "^18.0.0",
+    "c8": "^7.13.0",
     "del-cli": "^4.0.1",
     "ejs": "^3.1.8",
     "eslint": "^8.17.0",
@@ -93,5 +94,13 @@
     "branch": "main",
     "anyBranch": false
   },
-  "dependencies": {}
+  "c8": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  }
 }

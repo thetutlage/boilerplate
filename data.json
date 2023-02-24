@@ -3,5 +3,6 @@
   "REPO_HANDLE": "",
   "PACKAGE_DESCRIPTION": "",
   "NPM_AUTHORS": "comma separated npm usernames",
+  "LICENSE_AUTHOR": "",
   "LICENSE": "MIT"
 }

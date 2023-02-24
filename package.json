@@ -16,12 +16,13 @@
     "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
-    "release": "np --message=\"chore(release): %s\"",
+    "release": "np",
     "version": "npm run build",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
-    "sync-labels": "github-label-sync --labels .github/labels.json <%= REPO_HANDLE %>"
+    "sync-labels": "github-label-sync --labels .github/labels.json <%= REPO_HANDLE %>",
+    "vscode:test": "node --loader=ts-node/esm bin/test.ts"
   },
   "publishConfig": {
     "access": "public",
